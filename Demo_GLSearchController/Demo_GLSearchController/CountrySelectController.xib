@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountrySelectController">
+            <connections>
+                <outlet property="searchBar" destination="i8x-cu-Hhn" id="G9h-FA-03P"/>
+                <outlet property="searchBarContainer" destination="fB6-31-44Z" id="h0K-5r-A6F"/>
+                <outlet property="tableView" destination="5ln-tO-OMw" id="SA9-B1-wsS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5ln-tO-OMw">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="CoS-GV-JNN"/>
+                        <outlet property="delegate" destination="-1" id="ivZ-dJ-vKk"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5ln-tO-OMw" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="Tyq-E6-960"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="5ln-tO-OMw" secondAttribute="bottom" id="TzV-tq-KBp"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="5ln-tO-OMw" secondAttribute="trailing" id="cF6-OI-gHZ"/>
+                <constraint firstItem="5ln-tO-OMw" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="mer-dX-XBc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+        <view contentMode="scaleToFill" id="fB6-31-44Z">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8x-cu-Hhn" customClass="GLSearchBar">
+                    <rect key="frame" x="15" y="10" width="345" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="i8x-cu-Hhn" firstAttribute="top" secondItem="fB6-31-44Z" secondAttribute="top" constant="10" id="9ck-Ya-Usx"/>
+                <constraint firstAttribute="bottom" secondItem="i8x-cu-Hhn" secondAttribute="bottom" constant="10" id="ObX-RX-ZVg"/>
+                <constraint firstItem="i8x-cu-Hhn" firstAttribute="leading" secondItem="bGa-oU-ZSf" secondAttribute="leading" constant="15" id="PSP-ih-Ebb"/>
+                <constraint firstItem="bGa-oU-ZSf" firstAttribute="trailing" secondItem="i8x-cu-Hhn" secondAttribute="trailing" constant="15" id="yKE-R1-5nw"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="bGa-oU-ZSf"/>
+            <point key="canvasLocation" x="825.60000000000002" y="-117.84107946026987"/>
+        </view>
+    </objects>
+</document>
